@@ -29,12 +29,9 @@ class _AddressScreenState extends State<AddressScreen> {
       desiredAccuracy: LocationAccuracy.high,
     );
 
-    selectedLocation =
-        LatLng(position.latitude, position.longitude);
+    selectedLocation = LatLng(position.latitude, position.longitude);
 
-    mapController?.animateCamera(
-      CameraUpdate.newLatLng(selectedLocation),
-    );
+    mapController?.animateCamera(CameraUpdate.newLatLng(selectedLocation));
 
     await fillAddressFromLatLng();
     setState(() {});
@@ -46,22 +43,19 @@ class _AddressScreenState extends State<AddressScreen> {
     setState(() {});
   }
 
-
   Future<void> fillAddressFromLatLng() async {
-    List<Placemark> placemarks =
-    await placemarkFromCoordinates(
+    List<Placemark> placemarks = await placemarkFromCoordinates(
       selectedLocation.latitude,
       selectedLocation.longitude,
     );
 
     final place = placemarks.first;
 
-    fullAddressController.text =
-    "${place.street}, ${place.subLocality}";
+    fullAddressController.text = "${place.street}, ${place.subLocality}";
     cityController.text = place.locality ?? "";
     countryController.text = place.country ?? "";
-    provinceController.text= place.administrativeArea ?? "";
-    postalCodeController.text= place.postalCode ?? "";
+    provinceController.text = place.administrativeArea ?? "";
+    postalCodeController.text = place.postalCode ?? "";
   }
 
   @override
@@ -75,10 +69,7 @@ class _AddressScreenState extends State<AddressScreen> {
             children: [
               const Text(
                 "Enter your address",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 6),
               const Text(
@@ -104,8 +95,7 @@ class _AddressScreenState extends State<AddressScreen> {
                       Expanded(
                         child: Text(
                           "Use my current location",
-                          style:
-                          TextStyle(fontWeight: FontWeight.w600),
+                          style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                       ),
                       Icon(Icons.arrow_forward_ios, size: 16),
@@ -252,15 +242,21 @@ class _AddressScreenState extends State<AddressScreen> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 15),
+                        horizontal: 40,
+                        vertical: 15,
+                      ),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
-                    child: const Text("Next",style: TextStyle(color: Colors.white),),
+                    child: const Text(
+                      "Next",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ],
               ),
-              StepHeader(step:6)
+              StepHeader(step: 6),
             ],
           ),
         ),

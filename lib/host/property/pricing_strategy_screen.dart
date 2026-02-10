@@ -6,7 +6,8 @@ class PricingStrategiesScreen extends StatefulWidget {
   const PricingStrategiesScreen({super.key});
 
   @override
-  State<PricingStrategiesScreen> createState() => _PricingStrategiesScreenState();
+  State<PricingStrategiesScreen> createState() =>
+      _PricingStrategiesScreenState();
 }
 
 class _PricingStrategiesScreenState extends State<PricingStrategiesScreen> {
@@ -22,9 +23,12 @@ class _PricingStrategiesScreenState extends State<PricingStrategiesScreen> {
           padding: const EdgeInsets.all(16),
           child: Column(
             children: [
-              SizedBox(height: 10,),
-              Text('Pricing Strategies',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22),),
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
+              Text(
+                'Pricing Strategies',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+              ),
+              SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.all(14),
                 margin: const EdgeInsets.only(bottom: 12),
@@ -38,10 +42,14 @@ class _PricingStrategiesScreenState extends State<PricingStrategiesScreen> {
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Weekly Discount",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Text("7 nights or more",
-                            style: TextStyle(color: Colors.grey)),
+                        Text(
+                          "Weekly Discount",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "7 nights or more",
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
                     Row(
@@ -83,10 +91,14 @@ class _PricingStrategiesScreenState extends State<PricingStrategiesScreen> {
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Monthly Discount",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Text("28 nights or more",
-                            style: TextStyle(color: Colors.grey)),
+                        Text(
+                          "Monthly Discount",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "28 nights or more",
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
                     Row(
@@ -127,10 +139,14 @@ class _PricingStrategiesScreenState extends State<PricingStrategiesScreen> {
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Early Bird Discount",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Text("Booked 2+ months early",
-                            style: TextStyle(color: Colors.grey)),
+                        Text(
+                          "Early Bird Discount",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "Booked 2+ months early",
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
                     Row(
@@ -173,26 +189,32 @@ class _PricingStrategiesScreenState extends State<PricingStrategiesScreen> {
                           onPressed: () {
                             Get.back();
                           },
-                          child: const Text('Back', style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,)),
+                          child: const Text(
+                            'Back',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Colors.black,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                         const SizedBox(height: 10),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 15),
+                              horizontal: 40,
+                              vertical: 15,
+                            ),
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
-                          onPressed: () {
-                          },
+                          onPressed: () {},
                           child: const Text(
                             "Next",
-                            style: TextStyle(color: Colors.white, fontSize: 16,),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ),
                       ],

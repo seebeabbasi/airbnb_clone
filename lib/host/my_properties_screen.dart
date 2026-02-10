@@ -13,7 +13,6 @@ class _MyPropertiesScreenState extends State<MyPropertiesScreen> {
     return Scaffold(
       appBar: AppBar(title: Text('My property')),
       body: Center(child: Text('My property Screen Content')),
-
     );
   }
 }

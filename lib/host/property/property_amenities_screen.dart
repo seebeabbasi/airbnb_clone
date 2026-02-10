@@ -6,11 +6,11 @@ class PropertyAmenitiesScreen extends StatefulWidget {
   const PropertyAmenitiesScreen({super.key});
 
   @override
-  State<PropertyAmenitiesScreen> createState() => _PropertyAmenitiesScreenState();
+  State<PropertyAmenitiesScreen> createState() =>
+      _PropertyAmenitiesScreenState();
 }
 
 class _PropertyAmenitiesScreenState extends State<PropertyAmenitiesScreen> {
-
   Set<String> selected = {};
   final List<Map<String, dynamic>> amenities = [
     {'name': 'WI-FI', 'icon': Icons.wifi_rounded},
@@ -81,7 +81,11 @@ class _PropertyAmenitiesScreenState extends State<PropertyAmenitiesScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(item['icon'], size: 40, color: isSelected ? Colors.blue : Colors.grey),
+                            Icon(
+                              item['icon'],
+                              size: 40,
+                              color: isSelected ? Colors.blue : Colors.grey,
+                            ),
                             const SizedBox(height: 12),
                             Text(
                               item['name'],
@@ -99,9 +103,12 @@ class _PropertyAmenitiesScreenState extends State<PropertyAmenitiesScreen> {
                   },
                 ),
               ),
-              const Divider(height: 1,),
+              const Divider(height: 1),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
                 color: Colors.white,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -119,7 +126,8 @@ class _PropertyAmenitiesScreenState extends State<PropertyAmenitiesScreen> {
                               decoration: TextDecoration.underline,
                               color: Colors.black,
                               fontSize: 14,
-                              fontWeight: FontWeight.bold,),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         ElevatedButton(
@@ -129,14 +137,16 @@ class _PropertyAmenitiesScreenState extends State<PropertyAmenitiesScreen> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 15),
+                              horizontal: 40,
+                              vertical: 15,
+                            ),
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                           child: Text(
                             "Next",
-                            style: TextStyle(
-                                color:Colors.white),
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ],

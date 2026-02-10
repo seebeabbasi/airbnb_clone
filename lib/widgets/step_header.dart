@@ -12,10 +12,7 @@ class StepHeader extends StatelessWidget {
       children: [
         Text(
           'Step $step of 13',
-          style: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-          ),
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 6),
         LinearProgressIndicator(

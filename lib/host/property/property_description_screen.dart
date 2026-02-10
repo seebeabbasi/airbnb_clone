@@ -14,32 +14,59 @@ class PropertyDescriptionScreen extends StatelessWidget {
           children: [
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 40.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24.0,
+                  vertical: 40.0,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Create your description',
-                        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+                    const Text(
+                      'Create your description',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     const SizedBox(height: 8),
-                    const Text('Share what makes your place special.',
-                        style: TextStyle(fontSize: 16, color: Colors.grey)),
-                    const SizedBox(height: 40),
-
-                    const Text('LISTING TITLE',
-                        style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey)),
-                    const TextField(
-                      decoration: InputDecoration(hintText: 'MY PROPERTY 1'),
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    const Text(
+                      'Share what makes your place special.',
+                      style: TextStyle(fontSize: 16, color: Colors.grey),
                     ),
                     const SizedBox(height: 40),
 
-                    const Text('GENERAL DESCRIPTION',
-                        style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey)),
+                    const Text(
+                      'LISTING TITLE',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(hintText: 'MY PROPERTY 1'),
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+
+                    const Text(
+                      'GENERAL DESCRIPTION',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
+                      ),
+                    ),
                     const SizedBox(height: 8),
                     TextField(
                       maxLines: 6,
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                         hintText: "You'll have a great time...",
                       ),
                     ),
@@ -69,7 +96,8 @@ class PropertyDescriptionScreen extends StatelessWidget {
                             decoration: TextDecoration.underline,
                             color: Colors.black,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold,),
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       ElevatedButton(
@@ -79,9 +107,12 @@ class PropertyDescriptionScreen extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.red,
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 15),
+                            horizontal: 40,
+                            vertical: 15,
+                          ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                         child: const Text(
                           'Next',

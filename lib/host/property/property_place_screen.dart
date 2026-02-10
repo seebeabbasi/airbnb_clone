@@ -27,7 +27,10 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 20,
+                ),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +38,10 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
                       const SizedBox(height: 10),
                       const Text(
                         "Which of these best describes your place?",
-                        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       const SizedBox(height: 32),
 
@@ -43,12 +49,13 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: properties.length,
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 12,
-                          mainAxisSpacing: 12,
-                          childAspectRatio: 1.1,
-                        ),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 12,
+                              mainAxisSpacing: 12,
+                              childAspectRatio: 1.1,
+                            ),
                         itemBuilder: (context, index) {
                           bool isSelected = selectedIndex == index;
                           return GestureDetector(
@@ -63,7 +70,9 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
-                                  color: isSelected ? Colors.blue : Colors.grey.shade300,
+                                  color: isSelected
+                                      ? Colors.blue
+                                      : Colors.grey.shade300,
                                   width: isSelected ? 2 : 1,
                                 ),
                               ),
@@ -73,13 +82,17 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
                                   Icon(
                                     properties[index]["icon"],
                                     size: 40,
-                                    color: isSelected ? Colors.blue : Colors.grey,
+                                    color: isSelected
+                                        ? Colors.blue
+                                        : Colors.grey,
                                   ),
                                   const Spacer(),
                                   Text(
                                     properties[index]['name']!,
                                     style: const TextStyle(
-                                        fontSize: 16, fontWeight: FontWeight.bold),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -92,7 +105,7 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
                 ),
               ),
             ),
-            Divider(height: 1,),
+            Divider(height: 1),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               color: Colors.white,
@@ -112,26 +125,33 @@ class _PropertyPlaceScreenState extends State<PropertyPlaceScreen> {
                             decoration: TextDecoration.underline,
                             color: Colors.black,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold,),
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       ElevatedButton(
                         onPressed: selectedIndex != null
                             ? () {
-                          Get.toNamed('/propertyTypeScreen');
-                        }
+                                Get.toNamed('/propertyTypeScreen');
+                              }
                             : null,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.red,
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 15),
+                            horizontal: 40,
+                            vertical: 15,
+                          ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                         child: Text(
                           "Next",
                           style: TextStyle(
-                              color: selectedIndex != null ? Colors.white : Colors.grey.shade600),
+                            color: selectedIndex != null
+                                ? Colors.white
+                                : Colors.grey.shade600,
+                          ),
                         ),
                       ),
                     ],

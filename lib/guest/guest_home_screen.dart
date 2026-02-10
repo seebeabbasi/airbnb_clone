@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'explore_screen.dart';
+import 'trips/trips_screen.dart';
 import 'wishlist_screen.dart';
-import 'trips_screen.dart';
 import 'profile_screen.dart';
-
 
 class GuestHomeScreen extends StatefulWidget {
   const GuestHomeScreen({super.key});
@@ -40,8 +39,11 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         onTap: onTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: 'Wishlist'),
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Booking'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_border),
+            label: 'Wishlist',
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Trips'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),

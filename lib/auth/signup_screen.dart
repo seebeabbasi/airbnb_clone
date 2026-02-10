@@ -94,9 +94,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   fillColor: Colors.grey.shade100,
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscureText
-                          ? Icons.visibility_off
-                          : Icons.visibility,
+                      _obscureText ? Icons.visibility_off : Icons.visibility,
                     ),
                     onPressed: () {
                       setState(() {
@@ -165,7 +163,11 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   child: const Text(
                     'Sign up',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

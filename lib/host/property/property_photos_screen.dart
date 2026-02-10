@@ -23,7 +23,7 @@ class _PropertyPhotosScreenState extends State<PropertyPhotosScreen> {
           TextButton(
             onPressed: () {
               Get.back(result: ImageSource.camera);
-              },
+            },
             child: const Text("Camera"),
           ),
           TextButton(
@@ -90,24 +90,29 @@ class _PropertyPhotosScreenState extends State<PropertyPhotosScreen> {
                           ),
                           image: photos.isNotEmpty
                               ? DecorationImage(
-                            image: FileImage(photos[0]),
-                            fit: BoxFit.cover,
-                          )
+                                  image: FileImage(photos[0]),
+                                  fit: BoxFit.cover,
+                                )
                               : null,
                         ),
                         child: photos.isEmpty
                             ? Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(Icons.camera_alt_outlined,
-                                color: Colors.grey, size: 40),
-                            Text(
-                              "PHOTO 1",
-                              style: TextStyle(
-                                  fontSize: 10, color: Colors.grey),
-                            ),
-                          ],
-                        )
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Icon(
+                                    Icons.camera_alt_outlined,
+                                    color: Colors.grey,
+                                    size: 40,
+                                  ),
+                                  Text(
+                                    "PHOTO 1",
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
+                              )
                             : null,
                       ),
                     ),
@@ -137,26 +142,30 @@ class _PropertyPhotosScreenState extends State<PropertyPhotosScreen> {
                                 ),
                                 image: hasPhoto
                                     ? DecorationImage(
-                                  image: FileImage(photos[index]),
-                                  fit: BoxFit.cover,
-                                )
+                                        image: FileImage(photos[index]),
+                                        fit: BoxFit.cover,
+                                      )
                                     : null,
                               ),
                               child: !hasPhoto
                                   ? Column(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  const Icon(Icons.camera_alt_outlined,
-                                      color: Colors.grey, size: 24),
-                                  Text(
-                                    "PHOTO ${index + 1}",
-                                    style: const TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.grey),
-                                  ),
-                                ],
-                              )
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        const Icon(
+                                          Icons.camera_alt_outlined,
+                                          color: Colors.grey,
+                                          size: 24,
+                                        ),
+                                        Text(
+                                          "PHOTO ${index + 1}",
+                                          style: const TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                      ],
+                                    )
                                   : null,
                             ),
                           ),
@@ -194,24 +203,29 @@ class _PropertyPhotosScreenState extends State<PropertyPhotosScreen> {
                             ),
                             image: hasPhoto
                                 ? DecorationImage(
-                              image: FileImage(photos[index]),
-                              fit: BoxFit.cover,
-                            )
+                                    image: FileImage(photos[index]),
+                                    fit: BoxFit.cover,
+                                  )
                                 : null,
                           ),
                           child: !hasPhoto
                               ? Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Icon(Icons.camera_alt_outlined,
-                                  color: Colors.grey, size: 24),
-                              Text(
-                                "PHOTO ${index + 1}",
-                                style: const TextStyle(
-                                    fontSize: 10, color: Colors.grey),
-                              ),
-                            ],
-                          )
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
+                                      Icons.camera_alt_outlined,
+                                      color: Colors.grey,
+                                      size: 24,
+                                    ),
+                                    Text(
+                                      "PHOTO ${index + 1}",
+                                      style: const TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                  ],
+                                )
                               : null,
                         ),
                       ),
@@ -226,9 +240,9 @@ class _PropertyPhotosScreenState extends State<PropertyPhotosScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextButton(
-                    onPressed: (){
-                        Get.back();
-                     },
+                    onPressed: () {
+                      Get.back();
+                    },
                     child: const Text(
                       "Back",
                       style: TextStyle(
@@ -246,9 +260,12 @@ class _PropertyPhotosScreenState extends State<PropertyPhotosScreen> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 15),
+                        horizontal: 40,
+                        vertical: 15,
+                      ),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
                     child: const Text(
                       "Next",

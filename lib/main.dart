@@ -4,6 +4,7 @@ import 'auth/forget_password.dart';
 import 'auth/login_screen.dart';
 import 'auth/signup_screen.dart';
 import 'guest/guest_home_screen.dart';
+import 'guest/trips/trips_screen.dart';
 import 'host/host_home_screen.dart';
 import 'host/property/add_property_screen.dart';
 import 'host/property/cancellation_policy_screen.dart';
@@ -19,8 +20,7 @@ import 'host/property/property_type_screen.dart';
 import 'host/property/room_hosting_screen.dart';
 import 'host/property/set_price_screen.dart';
 
-
-  void main() {
+void main() {
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -36,25 +36,47 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/login',
       getPages: [
-        GetPage(name: '/login',  page: () => LoginScreen()),
+        GetPage(name: '/login', page: () => LoginScreen()),
         GetPage(name: '/forget', page: () => ForgetPassword()),
         GetPage(name: '/signup', page: () => SignupScreen()),
-        GetPage(name: '/guestHomeScreen', page:()=> GuestHomeScreen()),
-        GetPage(name: '/hostHomeScreen', page:()=> HostHomeScreen()),
-        GetPage(name: '/addPropertyScreen', page:()=> AddPropertyScreen()),
-        GetPage(name: '/propertyPlaceScreen', page:()=> PropertyPlaceScreen()),
-        GetPage(name: '/propertyTypeScreen', page:()=> PropertyTypeScreen()),
-        GetPage(name: '/guestCountScreen', page:()=> GuestCountScreen()),
-        GetPage(name: '/roomHostingScreen', page:()=> RoomHostingScreen()),
-        GetPage(name: '/propertyAmenitiesScreen', page:()=> PropertyAmenitiesScreen()),
-        GetPage(name: '/propertyAddressScreen', page:()=> AddressScreen()),
-        GetPage(name: '/propertyPhotosScreen', page:()=> PropertyPhotosScreen()),
-        GetPage(name: '/describeHouseScreen', page:()=> DescribeHouseScreen()),
-        GetPage(name: '/propertyDescriptionScreen', page:()=> PropertyDescriptionScreen()),
-        GetPage(name: '/cancellationPolicyScreen', page:()=> CancellationPolicyScreen()),
-        GetPage(name: '/setPriceScreen', page:()=> PriceYourPlaceScreen()),
-        GetPage(name: '/pricingStrategyScreen', page:()=> PricingStrategiesScreen()),
+        GetPage(name: '/guestHomeScreen', page: () => GuestHomeScreen()),
+        GetPage(name: '/hostHomeScreen', page: () => HostHomeScreen()),
+        GetPage(name: '/addPropertyScreen', page: () => AddPropertyScreen()),
+        GetPage(
+          name: '/propertyPlaceScreen',
+          page: () => PropertyPlaceScreen(),
+        ),
+        GetPage(name: '/propertyTypeScreen', page: () => PropertyTypeScreen()),
+        GetPage(name: '/guestCountScreen', page: () => GuestCountScreen()),
+        GetPage(name: '/roomHostingScreen', page: () => RoomHostingScreen()),
+        GetPage(
+          name: '/propertyAmenitiesScreen',
+          page: () => PropertyAmenitiesScreen(),
+        ),
+        GetPage(name: '/propertyAddressScreen', page: () => AddressScreen()),
+        GetPage(
+          name: '/propertyPhotosScreen',
+          page: () => PropertyPhotosScreen(),
+        ),
+        GetPage(
+          name: '/describeHouseScreen',
+          page: () => DescribeHouseScreen(),
+        ),
+        GetPage(
+          name: '/propertyDescriptionScreen',
+          page: () => PropertyDescriptionScreen(),
+        ),
+        GetPage(
+          name: '/cancellationPolicyScreen',
+          page: () => CancellationPolicyScreen(),
+        ),
+        GetPage(name: '/setPriceScreen', page: () => PriceYourPlaceScreen()),
+        GetPage(
+          name: '/pricingStrategyScreen',
+          page: () => PricingStrategiesScreen(),
+        ),
 
+        GetPage(name: '/tripsScreen', page: () => TripsScreen()),
       ],
     );
   }

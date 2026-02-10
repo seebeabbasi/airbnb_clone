@@ -46,7 +46,7 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              if(adults > 0){
+                              if (adults > 0) {
                                 setState(() {
                                   adults--;
                                 });
@@ -59,18 +59,26 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.grey),
                               ),
-                              child: const Icon(Icons.remove, color: Colors.grey),
+                              child: const Icon(
+                                Icons.remove,
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                           SizedBox(
                             width: 40,
-                            child: Center(child: Text(adults.toString(), style: const TextStyle(fontSize: 16))),
+                            child: Center(
+                              child: Text(
+                                adults.toString(),
+                                style: const TextStyle(fontSize: 16),
+                              ),
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {
-                             setState(() {
-                               adults++;
-                             });
+                              setState(() {
+                                adults++;
+                              });
                             },
                             child: Container(
                               width: 36,
@@ -95,7 +103,7 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              if(children> 0){
+                              if (children > 0) {
                                 setState(() {
                                   children--;
                                 });
@@ -108,12 +116,20 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.grey),
                               ),
-                              child: const Icon(Icons.remove, color: Colors.grey),
+                              child: const Icon(
+                                Icons.remove,
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                           SizedBox(
                             width: 40,
-                            child: Center(child: Text(children.toString(), style: const TextStyle(fontSize: 16))),
+                            child: Center(
+                              child: Text(
+                                children.toString(),
+                                style: const TextStyle(fontSize: 16),
+                              ),
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {
@@ -145,7 +161,7 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              if(infants> 0){
+                              if (infants > 0) {
                                 setState(() {
                                   infants--;
                                 });
@@ -158,18 +174,26 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.grey),
                               ),
-                              child: const Icon(Icons.remove, color: Colors.grey),
+                              child: const Icon(
+                                Icons.remove,
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                           SizedBox(
                             width: 40,
-                            child: Center(child: Text(infants.toString(), style: const TextStyle(fontSize: 16))),
+                            child: Center(
+                              child: Text(
+                                infants.toString(),
+                                style: const TextStyle(fontSize: 16),
+                              ),
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {
-                             setState(() {
-                               infants++;
-                             });
+                              setState(() {
+                                infants++;
+                              });
                             },
                             child: Container(
                               width: 36,
@@ -185,7 +209,7 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(height: 30),
                 ],
               ),
             ),
@@ -207,27 +231,33 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                       child: const Text(
                         "Back",
                         style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        Get.toNamed('/roomHostingScreen', arguments: {
-                          "adults": adults,
-                          "children": children,
-                          "infants": infants,
-                        });
+                        Get.toNamed(
+                          '/roomHostingScreen',
+                          arguments: {
+                            "adults": adults,
+                            "children": children,
+                            "infants": infants,
+                          },
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 40, vertical: 15),
+                          horizontal: 40,
+                          vertical: 15,
+                        ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                       child: const Text(
                         "Next",
@@ -236,7 +266,7 @@ class _GuestCountScreenState extends State<GuestCountScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 15,),
+                const SizedBox(height: 15),
                 const StepHeader(step: 3),
               ],
             ),

@@ -19,7 +19,7 @@ class Room {
     this.doubleBeds = 0,
     this.mattress = false,
     this.mattressCount = 0,
-    this.hasPets=false,
+    this.hasPets = false,
     this.hasLock,
   });
 }
@@ -34,7 +34,6 @@ class RoomHostingScreen extends StatefulWidget {
 class _RoomHostingScreenState extends State<RoomHostingScreen> {
   int roomCount = 1;
   List<Room> rooms = [Room()];
-
 
   void addRoom() {
     setState(() {
@@ -72,11 +71,14 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Total Rooms',
-                    style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold)),
+                const Text(
+                  'Total Rooms',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 const SizedBox(width: 25),
                 Row(
                   children: [
@@ -87,16 +89,17 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
                     Text(
                       '$roomCount',
                       style: const TextStyle(
-                          color: Colors.red,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold),
+                        color: Colors.red,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     IconButton(
                       onPressed: addRoom,
                       icon: const Icon(Icons.add, color: Colors.red),
                     ),
                   ],
-                )
+                ),
               ],
             ),
             const SizedBox(height: 20),
@@ -110,7 +113,9 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
 
                   return Container(
                     margin: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 8),
+                      horizontal: 16,
+                      vertical: 8,
+                    ),
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -119,15 +124,22 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Room ${index + 1}',
-                            style: const TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold)),
+                        Text(
+                          'Room ${index + 1}',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         const SizedBox(height: 15),
 
-
-                        const Text('Bathroom type',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold)),
+                        const Text(
+                          'Bathroom type',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         const SizedBox(height: 10),
                         Row(
                           children: [
@@ -191,10 +203,13 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
                           ],
                         ),
                         const SizedBox(height: 20),
-                        const Text('BEDS',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold)),
+                        const Text(
+                          'BEDS',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         const SizedBox(height: 8),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -298,7 +313,7 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
                                   if (!val) room.mattressCount = 0;
                                 });
                               },
-                              activeColor: Colors.blue,
+                              activeThumbColor: Colors.blue,
                             ),
                           ],
                         ),
@@ -331,54 +346,66 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
                                   ),
                                 ],
                               ),
-
                             ],
                           ),
                         Row(
-                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text('Pets Allowed', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                            Text(
+                              'Pets Allowed',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Switch(
-                                value:room.hasPets,
-                                onChanged: (val){
-                                  setState(() {
-                                    room.hasPets= val;
-                                  });
-                                },
-                              activeColor: Colors.blue,
-                                )
+                              value: room.hasPets,
+                              onChanged: (val) {
+                                setState(() {
+                                  room.hasPets = val;
+                                });
+                              },
+                              activeThumbColor: Colors.blue,
+                            ),
                           ],
                         ),
-                        SizedBox(height: 5,),
-                            Column(
-                              children: [
-                                Text('Does every bedroom have a lock',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
-                                SizedBox(height: 5,),
-                                RadioListTile(
-                                  title: Text('Yes'),
-                                    value: true,
-                                    groupValue: room.hasLock,
-                                  onChanged: (value){
-                                    setState(() {
-                                      room.hasLock=value!;
-                                    });
-                                  },
-                                  activeColor: Colors.blue,
-                                ),
-                                SizedBox(width: 5,),
-                                RadioListTile(
-                                  title: Text('No'),
-                                  value: false,
-                                  groupValue: room.hasLock,
-                                  onChanged: (value){
-                                    setState(() {
-                                      room.hasLock=value!;
-                                    });
-                                  },
-                                  activeColor: Colors.blue,
-                                ),
-                              ],
-                            )
+                        SizedBox(height: 5),
+                        Column(
+                          children: [
+                            Text(
+                              'Does every bedroom have a lock',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            RadioListTile(
+                              title: Text('Yes'),
+                              value: true,
+                              groupValue: room.hasLock,
+                              onChanged: (value) {
+                                setState(() {
+                                  room.hasLock = value!;
+                                });
+                              },
+                              activeColor: Colors.blue,
+                            ),
+                            SizedBox(width: 5),
+                            RadioListTile(
+                              title: Text('No'),
+                              value: false,
+                              groupValue: room.hasLock,
+                              onChanged: (value) {
+                                setState(() {
+                                  room.hasLock = value!;
+                                });
+                              },
+                              activeColor: Colors.blue,
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   );
@@ -415,9 +442,12 @@ class _RoomHostingScreenState extends State<RoomHostingScreen> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.red,
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 15),
+                            horizontal: 40,
+                            vertical: 15,
+                          ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                         child: const Text(
                           "Next",

@@ -22,7 +22,7 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-              SizedBox(height: 25,),
+            SizedBox(height: 25),
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(25),
@@ -33,9 +33,8 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   const Text(
-                    "House Policies",
+                    "Cancellation Policies",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
@@ -45,7 +44,7 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                   const SizedBox(height: 30),
 
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         selected = "Flexible";
                       });
@@ -72,13 +71,14 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                           Text(
                             "Flexible Cancellation",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           SizedBox(height: 4),
                           Text(
-                            "Full refund available based on policy terms.",
+                            "Free cancellation up to 24 hours before check-in. After that, a partial refund may apply.",
                             style: TextStyle(color: Colors.white, fontSize: 13),
                           ),
                         ],
@@ -87,7 +87,7 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                   ),
 
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         selected = "Moderate";
                       });
@@ -114,13 +114,14 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                           Text(
                             "Moderate Cancellation",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           SizedBox(height: 4),
                           Text(
-                            "Full refund available based on policy terms.",
+                            "Free cancellation up to 5 days before check-in. After that, a partial refund may apply.",
                             style: TextStyle(color: Colors.white, fontSize: 13),
                           ),
                         ],
@@ -129,7 +130,7 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                   ),
 
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         selected = "Strict";
                       });
@@ -156,13 +157,14 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                           Text(
                             "Strict Cancellation",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           SizedBox(height: 4),
                           Text(
-                            "Full refund available based on policy terms.",
+                            "Cancellation is only allowed within 48 hours of booking. No refund after that.",
                             style: TextStyle(color: Colors.white, fontSize: 13),
                           ),
                         ],
@@ -179,7 +181,7 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
-                  onPressed: (){
+                  onPressed: () {
                     Get.back();
                   },
                   child: const Text(
@@ -199,9 +201,12 @@ class _CancellationPolicyScreenState extends State<CancellationPolicyScreen> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 15),
+                      horizontal: 40,
+                      vertical: 15,
+                    ),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                   ),
                   child: const Text(
                     "Next",
